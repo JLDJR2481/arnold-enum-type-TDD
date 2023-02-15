@@ -3,7 +3,6 @@ package edu.craptocraft.arnoldenumtype;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.*;
 
-import edu.craptocraft.arnoldenumtype.Planeta;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
