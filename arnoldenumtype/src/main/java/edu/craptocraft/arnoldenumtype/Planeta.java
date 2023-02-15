@@ -1,5 +1,7 @@
 package edu.craptocraft.arnoldenumtype;
 
+import java.util.EnumSet;
+
 public enum Planeta {
 
     /*
@@ -63,5 +65,12 @@ public enum Planeta {
     // Calcular gravedad superficial del planeta
     public double gravedadSuperficie(Planeta planeta) {
         return gravedad * planeta.getMasa() / Math.pow(planeta.getRadio(), 2);
+    }
+
+    // Conseguir los planetas terrestres (MERCURY, VENUS, EARTH, MARS)
+
+    public static EnumSet<Planeta> getPlanetasTerrestres() {
+        return EnumSet.range(MERCURY, MARS);
+
     }
 }
