@@ -1,5 +1,7 @@
 package edu.craptocraft.arnoldenumtype;
 
+import java.util.EnumSet;
+
 public enum Planeta {
 
     MERCURY(3.303e+23, 2.4397e6),
@@ -66,6 +68,12 @@ public enum Planeta {
 
     public double pesoSuperficie(double peso) {
         return (calcularMasaPropia(peso) * gravedadSuperficie());
+    }
+
+    // Planetas terrestres: Más cercanos al sol. De Mercurio a Marte
+    public static EnumSet<Planeta> getPlanetasTerrestres() {
+        return EnumSet.range(MERCURY, MARS);
+
     }
 
 }
