@@ -70,9 +70,17 @@ public enum Planeta {
         return (calcularMasaPropia(peso) * gravedadSuperficie());
     }
 
-    // Planetas terrestres: Más cercanos al sol. De Mercurio a Marte
+    // Planetas terrestres: Más cercanos al Sol. De Mercurio a Marte
     public static EnumSet<Planeta> getPlanetasTerrestres() {
         return EnumSet.range(MERCURY, MARS);
+
+    }
+
+    // Planetas gigantes gaseosos: Más lejanos al Sol. Pluto no cuenta! De Júpiter a
+    // Neptuno.
+
+    public static EnumSet<Planeta> getGigantesGaseosos() {
+        return EnumSet.complementOf(getPlanetasTerrestres());
 
     }
 
